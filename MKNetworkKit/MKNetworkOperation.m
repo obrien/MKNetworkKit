@@ -1211,7 +1211,9 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite {
             redirectResponse: (NSURLResponse *)inRedirectResponse;
 {
   if (inRedirectResponse) {
-    NSMutableURLRequest *r = [self.request mutableCopy];
+    //NSMutableURLRequest *r = [self.request mutableCopy];
+    NSMutableURLRequest *r = [[NSMutableURLRequest alloc] init];
+
     [r setURL: [inRequest URL]];
     
     return r;
